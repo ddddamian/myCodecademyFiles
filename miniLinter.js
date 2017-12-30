@@ -8,7 +8,7 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 let storyWords = story.split(" ");
 
 // log how many words are in the story to the console
-console.log("There are " + storyWords.length + " words in this story.");
+console.log("There are " + storyWords.length + " words in the original story.");
 
 // Iterate over your array to filter out unncessary words. 
 let betterWords = storyWords.filter(function(word){
@@ -16,7 +16,8 @@ let betterWords = storyWords.filter(function(word){
     return word;
   }
 });
-console.log(betterWords);
+//console.log(betterWords);
+
 
 // variables for counting how many times an overused word is used
 let overused0 = 0;
@@ -25,27 +26,30 @@ let overused2 = 0;
 // variable for counting the number of sentences
 let sentences = 0;
 
+// loop through each word and check if it is an overused word
 for(let word in betterWords) {
-  if(word = overusedWords[0]) {
+  if(betterWords[word] === overusedWords[0]) {
      overused0 ++;
-  } else if(word = overusedWords[1]) {
+  } else if(betterWords[word] === overusedWords[1]) {
      overused1 ++;
-  } else if(word = overusedWords[2]) {
+  } else if(betterWords[word] === overusedWords[2]) {
      overused2 ++;
   }
 }
 
-for(let word in storyWords) {
-  console.log("THe word is " + storyWords[word]);
-  for(let letter of word){
-    console.log("The letter is " + word[letter]);
-    if(letter === "." || letter === "!"){
-     sentences++;
-    }
+// split the story into individual letters
+let letters = story.split("");
+
+// loop through each letter and count each '.' or '!'
+for(letter in letters) {
+  //console.log("The letter is " + letters[letter]);
+  if(letters[letter] === "." || letters[letter] === "!"){
+    sentences++;
   }
 }
 
-console.log("The word count is " + storyWords.length + ".");
+
+console.log("The improved word count is now " + betterWords.length + ".");
 console.log("The sentence count is " + sentences + ".");
 console.log("'" + overusedWords[0] + "' is used " + overused0 + " times.");
 console.log("'" + overusedWords[1] + "' is used " + overused1 + " times.");

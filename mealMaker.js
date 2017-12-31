@@ -14,27 +14,27 @@ let menu = {
     _desserts: [],
   
     get appetizers() {
-  
+      return this._appetizers;
     },
     
     set appetizers(appetizerIn) {
-      
+      this._appetizers.push(appetizerIn);
     },
       
     get mains() {
-      
+      return this._mains;
     },
     
     set mains(mainIn) {
-      
+      this._mains.push(mainIn);
     },
     
     get desserts() {
-      
+      return this._desserts;
     },
     
     set desserts(dessertIn) {
-      
+      this._desserts.push(dessertIn);
     }
   },
     
@@ -48,8 +48,8 @@ let menu = {
     
   addDishToCourse(courseName, dishName, dishPrice) {
     let dish = {
-      this.name = dishName;
-      this.price = dishPrice;
+      name: dishName,
+      price: dishPrice
     };
     this._courses[courseName].push(dish);
   },
@@ -66,19 +66,21 @@ let menu = {
     
     const totalPrice = appetizer.price + main.price + dessert.price;
     
-    return `Your appetizer will be ${appetizer.name}. Your main will be ${main.name}. Your dessert will be ${dessert.name}. The total price will be ${totalPrice}`
+    return `Your appetizer will be '${appetizer.name}'. Your main will be '${main.name}'. Your dessert will be '${dessert.name}'. The total price will be ${totalPrice}.`
   }
 };
 
-menu.addDishToCourse("appetizers", "soup", 4);
-menu.addDishToCourse("appetizers", "pate", 4);
-menu.addDishToCourse("appetizers", "", 4);
-menu.addDishToCourse("mains", "five bean chilli", 8);
-menu.addDishToCourse("mains", "steak", 10);
-menu.addDishToCourse("mains", "pasta carbonara", 9);
-menu.addDishToCourse("desserts", "cheesecake", 5);
-menu.addDishToCourse("desserts", "cheese", 3);
-menu.addDishToCourse("desserts", "bread pudding", 4);
+menu.addDishToCourse("appetizers", "Soup of the Day", 4);
+menu.addDishToCourse("appetizers", "Pate", 4);
+menu.addDishToCourse("appetizers", "Baked Camembert", 4);
+menu.addDishToCourse("mains", "Five Bean Chilli", 8);
+menu.addDishToCourse("mains", "Steak", 10);
+menu.addDishToCourse("mains", "Pasta Carbonara", 9);
+menu.addDishToCourse("mains", "Beef Burger", 9);
+menu.addDishToCourse("mains", "Roast Chicken", 10);
+menu.addDishToCourse("desserts", "Cheesecake", 5);
+menu.addDishToCourse("desserts", "Cheese Platter", 3);
+menu.addDishToCourse("desserts", "Bread Pudding", 4);
 
-let menu = menu.generateRandomMeal();
+let meal = menu.generateRandomMeal();
 console.log(meal);

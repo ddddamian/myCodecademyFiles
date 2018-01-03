@@ -23,3 +23,56 @@ Methods: .getAverageRating(), .toggleCheckOutStatus(), and .addRating()
 If you're looking for a challenge, try to create the four classes without using the steps below.
 */
 
+class Media {
+  constructor(title) {
+    this._title = title;
+    this._checkedOut = false;
+    this._ratings = [];
+  }
+  
+  get title() {
+    return this._title;
+  }
+  
+  get checkedOut() {
+    return this._checkedOut;
+  }
+  
+  get ratings() {
+    return this._ratings;
+  }
+  
+  getAverageRating() {
+    // Write code to calculate average
+  }
+  
+  toggleCheckOutStatus() {
+    this._checkedOut = !_checkedOut;
+  }
+  
+  addRating(rating) {
+    this._ratings.push(rating);
+  }
+}
+
+
+class Book extends Media {
+  constructor() {
+    super(title);
+    
+  }
+}
+
+class Movie extends Media {
+  constructor() {
+    super(title);
+    
+  }
+}
+
+class CD extends Media {
+  constructor() {
+    super(title);
+    
+  }
+}

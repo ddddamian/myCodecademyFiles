@@ -23,3 +23,64 @@ Properties: sportsTeams (array of strings)
 If you're looking for a challenge, create the constructor() and getters for the four classes above. 
 Then, use the setter and methods specifications in steps five, six, and seven to finish the project.
 */
+
+class School {
+  constructor(name, level, numberOfStudents) {
+    this._name = name;
+    this._level = level;
+    this._numberOfStudents = numberOfStudents;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get level() {
+    return this._level;
+  }
+  
+  get numberOfStudents() {
+    return this._numberOfStudents;
+  }
+  
+  set numberOfStudents(num) {
+    this._numberOfStudents = num;
+  }
+  
+  quickFacts() {
+    
+  }
+  
+  pickSubstitueTeacher() {
+    
+  }
+}
+
+class Primary extends School {
+  constructor() {
+    super()
+    this._pickupPolicy = pickupPolicy;
+  }
+  
+  get pickupPolicy() {
+    return this._pickupPolicy;
+  }
+}
+
+class Middle extends School {
+  constructor() {
+    super()
+
+  }
+}
+
+class High extends School {
+  constructor() {
+    super()
+    this._sportsTeams = sportsTeams;
+  }
+  
+  get sportsTeams() {
+    return this._sportsTeams;
+  }
+}

@@ -43,16 +43,20 @@ class School {
     return this._numberOfStudents;
   }
   
-  set numberOfStudents(num) {
-    this._numberOfStudents = num;
+  set numberOfStudents(newNumberOfStudents) {
+    if(typeof newNumberOfStudents === 'number') {
+      this._numberOfStudents = newNumberOfStudents;
+    } else {
+      console.log('Invalid input: numberOfStudents must be set to a Number.');
+    }
   }
   
   quickFacts() {
-    
+    console.log(`${this.name} educates ${this.numberOfStudents} students, typically between the ages of ${this.level}.`);
   }
   
-  pickSubstitueTeacher() {
-    
+  static pickSubstitueTeacher(substituteTeachers) {
+    return substituteTeachers[Math.floors(Math.Random * substitueTeachers.length)];
   }
 }
 

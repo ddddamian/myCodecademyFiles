@@ -1,4 +1,4 @@
-?**
+/**
 Calculate if you're getting enough sleep each week.
 
 Objective: We are going to write a calculator that calculates sleep debt. The program will ask a user how many hours of sleep is ideal each night, then compare that to the actual hours they slept each night of the last week.

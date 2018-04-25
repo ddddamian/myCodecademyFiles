@@ -8,6 +8,8 @@ h1 {
   font-family: 'Pacifico', cursive;
   height: 400px;
   background-image: url("lemonade.jpg");
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
 }
 
 .banner .slogan {
@@ -18,6 +20,7 @@ h1 {
   width: 50%;
   height: 200px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .banner .slogan span {
@@ -35,4 +38,6 @@ h1 {
   margin: 2%;
   border: 4px solid black;
   font-size: 32px;
+  width: 300px;
+  height: 300px;
 }
